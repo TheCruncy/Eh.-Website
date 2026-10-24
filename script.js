@@ -1,20 +1,25 @@
 let randomNumber = Math.floor(Math.random() * 100) + 1;
 
-const input = document.querySelector("#input");
+const name = document.querySelector("#nameInput");
 const output = document.querySelector("#output");
-const currentValue = document.querySelector("#currentValue");
+const nameSubmit = document.querySelector("#nameSubmit");
+const dayOneText = document.querySelector("#dayOneText");
 
-currentValue.textContent = "--- ";
+dayOneText.style.display = "none";
 output.textContent = "---";
 
-function currentValueSet() {
-    let currentValueText = Number(input.value);
-    let realAge = currentValueText + 1;
-    currentValue.textContent = currentValueText;
-    output.textContent = realAge;
+function submitButton() {
+    output.textContent = nameInput.value;
 }
 
-input.oninput = currentValueSet;
+nameSubmit.addEventListener("click", submitButton);
 
+function hideActive(x) {
+    x.style.display = "none";
+}
+
+function showDayOneText() {
+    dayOneText.style.display = "block";
+}
 
 

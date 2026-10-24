@@ -7,28 +7,28 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="Everything">
-      <h1>This is a website that adds one to your age!!!</h1>
-      <p>Put your age in here!!</p>
-      <div class="sliderBox">
-        <input
-          type="range"
-          min="0"
-          max="150"
-          id="input"
-          onkeydown="return false;"
-          class="slider"
-        />
-        <div>
-          <p id="currentValue"></p>
-        </div>
-      </div>
-
-      <p>
-        <span>YOUR AGE IS: </span>
-        <span id="output"></span>
-      </p>
-      <script src="script.js"></script>
+    <h1>Kobold simulator!!!</h1>
+    <p>Type in your name</p>
+    <div class="nameSelectBox">
+      <input type="text" id="nameInput" />
+      <input type="submit" value="Submit Name" id="nameSubmit" />
     </div>
+    <p>
+      <span>YOUR NAME IS: </span>
+      <span id="output"></span>
+    </p>
+
+    <div class="day1">
+      <p>You awaken in the cave, it's nice and quiet today.</p>
+      <button id="continue" onclick="(hideActive(this), showDayOneText())">
+        Continue
+      </button>
+      <div class="dayOneText" id="dayOneText">
+        <p>You fall into a trap and die.</p>
+        <p>The end.</p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
