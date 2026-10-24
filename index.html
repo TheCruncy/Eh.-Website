@@ -3,15 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Kobold Simulator</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <h1>Kobold simulator!!!</h1>
-    <p>Type in your name</p>
+    <p>
+      <span>Type in your name!</span>
+      <span class="red">Warning: Once submitted, it cannot be changed!</span>
+    </p>
     <div class="nameSelectBox">
       <input type="text" id="nameInput" />
-      <input type="submit" value="Submit Name" id="nameSubmit" />
+      <input
+        type="submit"
+        value="Submit Name"
+        id="nameSubmit"
+        onclick="(hideActive(this), makeReadOnly(nameInput))"
+      />
     </div>
     <p>
       <span>YOUR NAME IS: </span>

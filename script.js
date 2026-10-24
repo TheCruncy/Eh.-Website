@@ -8,15 +8,20 @@ const dayOneText = document.querySelector("#dayOneText");
 dayOneText.style.display = "none";
 output.textContent = "---";
 
-function submitButton() {
-    output.textContent = nameInput.value;
+function makeReadOnly(x) {
+    x.readOnly = true;
 }
-
-nameSubmit.addEventListener("click", submitButton);
 
 function hideActive(x) {
     x.style.display = "none";
 }
+
+function submitButton() {
+    output.textContent = nameInput.value;
+    hideActive();
+}
+
+nameSubmit.addEventListener("click", submitButton);
 
 function showDayOneText() {
     dayOneText.style.display = "block";
