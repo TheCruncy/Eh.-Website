@@ -9,8 +9,9 @@ output.textContent = "---";
 
 function currentValueSet() {
     let currentValueText = Number(input.value);
+    let realAge = currentValueText + 1;
     currentValue.textContent = currentValueText;
-    output.textContent = currentValueText;
+    output.textContent = realAge;
 }
 
 input.oninput = currentValueSet;
