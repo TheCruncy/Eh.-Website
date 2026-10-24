@@ -1,0 +1,30 @@
+.Everything {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 50%;
+    background: #00FF00;
+}
+.sliderBox {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px;
+        margin: 10px;
+        p {
+            text-align: center;
+        }
+    }
+}

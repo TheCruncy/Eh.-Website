@@ -4,6 +4,32 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="/style.css" />
   </head>
-  <body></body>
+  <body>
+    <div class="Everything">
+      <h1>This is a website that adds one to your age!!!</h1>
+      <p>Put your age in here!!</p>
+      <div class="sliderBox">
+        <input
+          type="range"
+          min="0"
+          max="150"
+          id="input"
+          onkeydown="return false;"
+          class="slider"
+        />
+        <div>
+          <p id="currentValue"></pn>
+        </div>
+        <input type="submit" value="Submit age" id="button" />
+      </div>
+
+      <p>
+        <span>YOUR AGE IS: </span>
+        <span id="output"></span>
+      </p>
+      <script src="/script.js"></script>
+    </div>
+  </body>
 </html>
