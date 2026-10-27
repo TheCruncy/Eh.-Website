@@ -25,7 +25,7 @@ function timerGoUp() {
 
 function makeActiveMenu(x) {
     leftMenuActive.style.display = "none";
-    x.style.display = "block";
+    x.style.display = "flex";
     leftMenuActive = x;
 }
 function makeReadOnly(x) {
