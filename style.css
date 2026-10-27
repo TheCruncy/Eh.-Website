@@ -92,4 +92,19 @@ p {
 }
 .inventoryMenu {
     display: flex;
+    div {
+        width: 100px;
+        display: block;
+        height: 100px;
+        background-color: blue;
+        img {
+            position: absolute;
+            image-rendering: pixelated;
+            width: 100%;
+            height: 100%;   
+        }
+        p {
+            position: absolute;
+        }
+    }
 }

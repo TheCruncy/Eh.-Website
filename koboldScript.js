@@ -2,10 +2,10 @@ const miningGame = document.querySelector("#miningGame");
 const craftingGame = document.querySelector("#craftingGame");
 const craftingGamePointer = document.querySelector("#craftingGamePointer");
 const inventory = document.querySelector("#inventory");
+const inventoryMenu = document.querySelector("#inventoryMenu")
 const inventoryContent = [ ]
 
 let leftMenuActive = miningGame;
-
 
 function makeActiveMenu(x) {
     leftMenuActive.style.display = "none";
@@ -20,17 +20,17 @@ class Item {
     }
     quantity = 1;
     getImageSource() {
-        return `assets/images/${this.id}.png`;
+        return `/assets/images/${this.id}.png`;
     }
 }
 
-function addToInventory(id) {
+function addToInventory(id, name) {
     let invLength = inventoryContent.length
     let idMatch = false
     let currentItem = 0
+    // checks if the inventory has the item in it already
     for (let i = 0; i <= invLength; i++) {
         console.log("searching")
-        console.log(inventoryContent[i])
         if (inventoryContent[i]?.id === id) {
             console.log("Match found");
             idMatch = true;
@@ -39,19 +39,27 @@ function addToInventory(id) {
         }
     }
     if (idMatch === true) {
-        console.log("Attempting to increase quantity")
+        console.log("Attempting to increase quantity of " + name)
         inventoryContent[currentItem].quantity += 1
     }
     else {
-        inventoryContent.push(new Item(id))
+        inventoryContent.push(new Item(id, name))
     }
-    console.log(inventoryContent)
+    console.log(inventoryContent);
+    updateInventory();
 }
 
-function addShitToFuck() {
-    const para = document.createElement("p");
-    const node = document.createTextNode("This is new.");
-    para.appendChild(node);
-    const element = inventory
-    element.appendChild(para);
+function updateInventory() {
+    inventoryMenu.replaceChildren();
+    let invLength = inventoryContent.length;
+    const invItem = document.createElement("div");
+    const invIcon = document.createElement("img");
+    const invName = document.createElement("p");
+    for (let i = 0; i <= invLength; i++) {
+        invName.appendChild(document.createTextNode(inventoryContent[i].name))
+        invItem.appendChild(invIcon)
+        invItem.appendChild(invName)
+        inventoryMenu.appendChild(invItem)
+
+    }
 }
