@@ -1,6 +1,7 @@
 h1 {
     text-align: center;
 }
+
 p {
     text-align: center;
 }
@@ -28,4 +29,47 @@ p {
 }
 .red {
     color: red
+}
+
+.main {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    transform-origin: 0 0;
+    display: flex;
+    background: red;
+    justify-content: center;
+}
+
+.leftMenu {
+    position: relative;
+    background: red;
+    display: block;
+    justify-content: center;
+    overflow: clip;
+    flex-grow: 5;
+}
+.middleMenu {
+    position: relative;
+    background: green;
+    display: block;
+    justify-content: center;
+
+    flex-grow: 3;
+}
+.rightMenu {
+    position: relative;
+    background: blue;
+    display: block;
+    justify-content: center;
+
+    flex-grow: 2;
+}
+
+#craftingGame {
+    display: none;
 }

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kobold Simulator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="leftMenu">
+        <div id="miningGame">
+          <h1>THIS IS THE MINING GAME</h1>
+        </div>
+        <div id="craftingGame">
+          <h1>THIS IS THE CRAFTING GAME</h1>
+        </div>
+      </div>
+      <div class="middleMenu">
+        <div id="inventory">
+          <h1>THIS IS THE INVENTORY</h1>
+        </div>
+      </div>
+      <div class="rightMenu">
+        <div id="navigationMenu">
+          <h1>THIS IS A NAVIGATION MENU</h1>
+          <button id="miningGamePointer" onclick="makeActiveMenu(miningGame)">
+            CLICK THIS TO CHANGE TO MINING GAME
+          </button>
+          <button
+            id="craftingGamePointer"
+            onclick="makeActiveMenu(craftingGame)"
+          >
+            CLICK THIS TO CHANGE TO CRAFTING GAME
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
