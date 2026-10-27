@@ -23,12 +23,19 @@
       <div class="middleMenu">
         <div id="inventory">
           <h1>THIS IS THE INVENTORY</h1>
+          <div class="inventoryMenu" id="inventoryMenu"></div>
         </div>
       </div>
       <div class="rightMenu">
         <div id="navigationMenu">
           <h1>THIS IS A NAVIGATION MENU</h1>
-          <button id="miningGamePointer" onclick="makeActiveMenu(miningGame)">
+          <button
+            id="miningGamePointer"
+            onclick="
+              (makeActiveMenu(miningGame),
+                addToInventory(`ruby`, `Ruby Crystal`))
+            "
+          >
             CLICK THIS TO CHANGE TO MINING GAME
           </button>
           <button
@@ -40,6 +47,6 @@
         </div>
       </div>
     </div>
-    <script src="script.js"></script>
+    <script src="koboldScript.js"></script>
   </body>
 </html>

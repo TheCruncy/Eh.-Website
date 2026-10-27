@@ -90,3 +90,6 @@ p {
         }
     }
 }
+.inventoryMenu {
+    display: flex;
+}
